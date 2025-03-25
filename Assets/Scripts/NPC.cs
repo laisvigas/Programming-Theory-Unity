@@ -2,15 +2,15 @@ using UnityEngine;
 
 public abstract class NPC : MonoBehaviour
 {
-    public string npcName;
+    public string npcName; // ENCAPSULATION
     
     [SerializeField]  
-    private AudioClip sound; 
-    protected int clickCount = 0;
+    private AudioClip sound; // ENCAPSULATION
+    protected int clickCount = 0; // ENCAPSULATION
 
-    public abstract void Move();
+    public abstract void Move(); // ABSTRACTION
 
-    public virtual void Interact()
+    public virtual void Interact() // ABSTRACTION
     {
         clickCount++;
         Debug.Log($"{npcName} clicked {clickCount} times!");
@@ -22,7 +22,7 @@ public abstract class NPC : MonoBehaviour
         Interact();
     }
 
-    private void PlaySound()
+    private void PlaySound() // ENCAPSULATION
     {
         if (sound != null)
         {

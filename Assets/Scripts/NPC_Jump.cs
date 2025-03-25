@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class NPC_Jump : NPC
+public class NPC_Jump : NPC // INHERITANCE
 {
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private float jumpHeight = 2f;
-    [SerializeField] private float minJumpInterval = 2f; 
-    [SerializeField] private float maxJumpInterval = 10f;
+    [SerializeField] private AudioClip jumpSound; // ENCAPSULATION
+    [SerializeField] private float jumpHeight = 2f; // ENCAPSULATION
+    [SerializeField] private float minJumpInterval = 2f;  // ENCAPSULATION
+    [SerializeField] private float maxJumpInterval = 10f; // ENCAPSULATION
     private bool isJumping = false;
     private float jumpTimer = 0f;
     private Vector3 startPos;
@@ -21,7 +21,7 @@ public class NPC_Jump : NPC
         Move();
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         // Handle jumping
         jumpTimer -= Time.deltaTime;

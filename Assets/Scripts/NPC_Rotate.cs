@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPC_Rotate : NPC
+public class NPC_Rotate : NPC // INHERITANCE
 {
     public float rotationSpeed = 20f;  
     public float rotationAngle = 10f;  
@@ -18,7 +18,7 @@ public class NPC_Rotate : NPC
         Move();
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         currentRotation += rotationSpeed * rotationDirection * Time.deltaTime;
         if (Mathf.Abs(currentRotation) >= rotationAngle)

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPC_Walk : NPC
+public class NPC_Walk : NPC // INHERITANCE
 {
     public float moveSpeed = 2f;
     public float rotationSpeed = 5f; 
@@ -16,7 +16,7 @@ public class NPC_Walk : NPC
         Move();
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
@@ -33,7 +33,7 @@ public class NPC_Walk : NPC
         }
     }
 
-    private void SetRandomTargetPosition()
+    private void SetRandomTargetPosition() // ENCAPSULATION
     {
         targetPosition = new Vector3(Random.Range(0f, 7f), transform.position.y, Random.Range(-7f, 0f));
     }
